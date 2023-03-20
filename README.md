@@ -6,4 +6,5 @@
 （2）该文件的簇链  
 （3）根据上述的文件簇链，从磁盘上提取数据并拼接而得的新文件（B）  
 （4）文件A与文件B内容的比较结果  
+![image](https://user-images.githubusercontent.com/96651300/226340240-319d59c6-1e1a-412a-ad75-a50db879a5e0.png)
 
