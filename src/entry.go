@@ -14,6 +14,7 @@ var nxt int //记录下个目录的簇偏移
 func main() {
 	if len(os.Args) > 2 {
 		fmt.Println("请输入单个目录")
+		return
 	}
 	fullPath := os.Args[1]
 	opath := strings.Split(fullPath, "/")
@@ -99,7 +100,7 @@ func main() {
 	nxt = RootOffset
 	fmt.Printf("根目录偏移：%X\nFAT偏移%X\n", RootOffset, FatOffset)
 	var fok bool
-	for idx, _ := range dir {
+	for idx := range dir {
 		fok, err = FindFile(idx, fi, buf, nxt, name, ext, dir, odir, fullPath, FatOffset, RootOffset)
 		if err != nil {
 			fmt.Println(err)
